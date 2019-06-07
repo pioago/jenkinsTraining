@@ -1,0 +1,9 @@
+job('generatedJob') {
+  description("I was created by $JOB_NAME")
+  parameters {
+      stringParam('Param', "$BUILD_NUMBER", '')
+  }
+  steps {
+      shell('echo $Param')
+  }
+}
